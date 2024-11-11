@@ -16,7 +16,16 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-          
+      - name: Create .env file from GitHub Secrets and Variables
+        run: |
+          # Create .env file with blank values if not available
+          echo "VITE_OPENAI_API_KEY=${{ secrets.VITE_OPENAI_API_KEY || '' }}" >> .env
+          echo "VITE_GROQ_API_KEY=${{ secrets.VITE_GROQ_API_KEY || '' }}" >> .env
+          echo "VITE_GROK_API_KEY=${{ secrets.VITE_GROK_API_KEY || '' }}" >> .env
+          echo "VITE_ADMIN_PASSWORD=${{ secrets.VITE_ADMIN_PASSWORD || '' }}" >> .env
+          # Set VITE_PORT with default value 3005 if not set
+          echo "VITE_PORT=${{ vars.VITE_PORT || '3005' }}" >> .env
+        
       - name: Create env file
         run: |
           if [ ! -f .env ]; then
