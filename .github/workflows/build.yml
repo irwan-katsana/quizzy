@@ -35,4 +35,4 @@ jobs:
 
       - name: Restart the application
         run: |
-          pm2 restart quizzy || pm2 start <entry_file.js> --name quizzy || true
+          pm2 restart quizzy || pm2 start app.js --name quizzy || true
