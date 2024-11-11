@@ -1,0 +1,43 @@
+name: Local Deployment
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Create env file
+        run: |
+          if [ ! -f .env ]; then
+            cp .env.example .env
+          fi
+          
+      - name: Install dependencies
+        run: |
+          npm ci
+          npm install -g pm2
+          
+      - name: Build
+        run: npm run build
+        
+      - name: Start/Restart Production Server
+        run: |
+          # Extract port from .env file, default to 3000 if not found
+          PORT=$(grep VITE_PORT .env | cut -d '=' -f2 || echo 3000)
+          
+          # Stop existing instance if running
+          pm2 delete quizzy 2>/dev/null || true
+          
+          # Start new instance with the extracted port
+          pm2 serve dist $PORT --name quizzy --spa
