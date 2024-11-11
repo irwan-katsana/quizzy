@@ -11,9 +11,9 @@ jobs:
     runs-on: self-hosted
 
     env:
-      VITE_OPENAI_API_KEY: ${{ secrets.VITE_OPENAI_API_KEY }}
-      VITE_GROQ_API_KEY: ${{ secrets.VITE_GROQ_API_KEY }}
-      VITE_GROK_API_KEY: ${{ secrets.VITE_GROK_API_KEY }}
+      VITE_OPENAI_API_KEY: ${{ secrets.VITE_OPENAI_API_KEY || '' }}
+      VITE_GROQ_API_KEY: ${{ secrets.VITE_GROQ_API_KEY || '' }}
+      VITE_GROK_API_KEY: ${{ secrets.VITE_GROK_API_KEY || '' }}
       VITE_ADMIN_PASSWORD: ${{ secrets.VITE_ADMIN_PASSWORD }}
       VITE_PORT: ${{ vars.VITE_PORT }}
 
