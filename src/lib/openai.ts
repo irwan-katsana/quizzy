@@ -11,9 +11,9 @@ interface ModelConfig {
 }
 
 export const modelConfig: ModelConfig = {
-  provider: 'groq',
-  model: 'mixtral-8x7b-32768',
-  apiKey: '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',
+  provider: 'openai',
+  model: 'gpt-4o-mini',
+  apiKey: import.meta.env.VITE_OPENAI_API_KEY || '',
   temperature: 0.7,
   topP: 1.0
 };
@@ -21,19 +21,20 @@ export const modelConfig: ModelConfig = {
 const API_ENDPOINTS = {
   groq: 'https://api.groq.com/openai/v1',
   grok: 'https://api.x.ai/v1',
-  openai: undefined
+  openai: 'https://api.openai.com/v1'
 };
 
-const DEFAULT_API_KEYS = {
-  groq: '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',
-  grok: 'xai-WgiUAuD4ZKgybN5zGjYU1McEDTlQu9ycT7jxLzKK03cjwcnrKxKoVouqMswCxyg8hD11RPmmKmtA2wdR',
-  openai: 'sk-svcacct-mQ85RsXfW_7huGODNf29JiYDnwDSbWf1QWLRIoZX7n1cKxUi9zw9bLqYs3qT-VuQeQD5TT3BlbkFJ0OhVtgtJcuunEAzktBxfhA56terZKy3KWreoPwrfo_Kyru2FtZB6j8D2z0eEEwv-CDMAA'
-};
+// Get API keys from environment variables
+const API_KEYS = {
+  groq: import.meta.env.VITE_GROQ_API_KEY || '',
+  grok: import.meta.env.VITE_GROK_API_KEY || '',
+  openai: import.meta.env.VITE_OPENAI_API_KEY || ''
+} as const;
 
 export let latestApiResponse: any = null;
 
 export let openai = new OpenAI({
-  apiKey: modelConfig.apiKey,
+  apiKey: modelConfig.apiKey || API_KEYS[modelConfig.provider],
   baseURL: API_ENDPOINTS[modelConfig.provider],
   dangerouslyAllowBrowser: true
 });
@@ -42,7 +43,7 @@ export const updateModelConfig = (newConfig: Partial<ModelConfig>) => {
   Object.assign(modelConfig, newConfig);
   if (newConfig.apiKey || newConfig.provider) {
     openai = new OpenAI({
-      apiKey: modelConfig.apiKey || DEFAULT_API_KEYS[modelConfig.provider],
+      apiKey: modelConfig.apiKey || API_KEYS[modelConfig.provider],
       baseURL: API_ENDPOINTS[modelConfig.provider],
       dangerouslyAllowBrowser: true
     });
@@ -81,7 +82,7 @@ Follow these rules strictly:
 3. One and only one option must be correct
 4. Include a brief, informative explanation for the correct answer
 5. Avoid personal questions like, what is your favorite color
-6.Provide the output only as a JSON array in the exact format specified below, without any additional text, code blocks, or formatting. Do not include backticks, markdown, or language indicators. The JSON array should look like this::
+6. Provide the output only as a JSON array in the exact format specified below, without any additional text, code blocks, or formatting. Do not include backticks, markdown, or language indicators. The JSON array should look like this:
 [{
   "id": "unique_string",
   "question": "question_text",

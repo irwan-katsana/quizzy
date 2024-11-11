@@ -30,47 +30,7 @@ import {
   verifyApiKey,
   latestApiResponse
 } from '@/lib/openai';
-
-const ADMIN_PASSWORD = 'T#sting123q';
-
-const MODEL_OPTIONS = {
-  openai: ['gpt-4o', 'gpt-4o-mini', 'gpt-4-turbo', 'gpt-3.5-turbo'],
-  groq: ['llama-3.1-70b-versatile', 'llama-3.2-3b-preview', 'mixtral-8x7b-32768', 'llama2-70b-4096'],
-  grok: ['grok-beta']
-};
-
-const DEFAULT_API_KEYS = {
-  groq: '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',
-  grok: 'xai-WgiUAuD4ZKgybN5zGjYU1McEDTlQu9ycT7jxLzKK03cjwcnrKxKoVouqMswCxyg8hD11RPmmKmtA2wdR',
-  openai: 'sk-svcacct-mQ85RsXfW_7huGODNf29JiYDnwDSbWf1QWLRIoZX7n1cKxUi9zw9bLqYs3qT-VuQeQD5TT3BlbkFJ0OhVtgtJcuunEAzktBxfhA56terZKy3KWreoPwrfo_Kyru2FtZB6j8D2z0eEEwv-CDMAA'
-};
-
-function formatApiResponse(response: any): string {
-  if (!response) return 'No API response yet';
-  
-  try {
-    if (response.choices?.[0]?.message?.content) {
-      try {
-        const content = JSON.parse(response.choices[0].message.content);
-        return JSON.stringify({
-          ...response,
-          choices: [{
-            ...response.choices[0],
-            message: {
-              ...response.choices[0].message,
-              content: content
-            }
-          }]
-        }, null, 2);
-      } catch {
-        return JSON.stringify(response, null, 2);
-      }
-    }
-    return JSON.stringify(response, null, 2);
-  } catch (error) {
-    return 'Error formatting API response';
-  }
-}
+import { validateAdminPassword } from '@/lib/auth';
 
 export function AdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -86,7 +46,7 @@ export function AdminPage() {
   const { toast } = useToast();
 
   const handleLogin = () => {
-    if (password === ADMIN_PASSWORD) {
+    if (validateAdminPassword(password)) {
       setIsAuthenticated(true);
       toast({
         title: "Success",
@@ -105,16 +65,15 @@ export function AdminPage() {
   const handleProviderChange = (newProvider: ModelProvider) => {
     setProvider(newProvider);
     setModel(MODEL_OPTIONS[newProvider][0]);
-    const defaultKey = DEFAULT_API_KEYS[newProvider];
-    setApiKey(defaultKey);
+    setApiKey('');
     updateModelConfig({
       provider: newProvider,
       model: MODEL_OPTIONS[newProvider][0],
-      apiKey: defaultKey
+      apiKey: ''
     });
     toast({
       title: "Provider Changed",
-      description: `Switched to ${newProvider} with default configuration.`,
+      description: `Switched to ${newProvider}. Please enter your API key.`,
     });
   };
 
@@ -160,6 +119,12 @@ export function AdminPage() {
       title: "Reset Complete",
       description: "System prompt has been reset to default.",
     });
+  };
+
+  const MODEL_OPTIONS = {
+    openai: ['gpt-4o', 'gpt-4o-mini', 'gpt-4-turbo', 'gpt-3.5-turbo'],
+    groq: ['llama-3.1-70b-versatile', 'llama-3.2-3b-preview', 'mixtral-8x7b-32768', 'llama2-70b-4096'],
+    grok: ['grok-beta']
   };
 
   if (!isAuthenticated) {
@@ -236,7 +201,7 @@ export function AdminPage() {
             <Label>API Key</Label>
             <div className="flex space-x-2">
               <Input
-                type="text"
+                type="password"
                 value={apiKey}
                 onChange={(e) => setApiKey(e.target.value)}
                 className="flex-1 font-mono text-sm"
@@ -336,7 +301,7 @@ export function AdminPage() {
             {showApiResponse && (
               <div className="relative">
                 <Textarea
-                  value={formatApiResponse(latestApiResponse)}
+                  value={JSON.stringify(latestApiResponse, null, 2)}
                   readOnly
                   className="min-h-[300px] font-mono text-sm bg-gray-50 dark:bg-gray-900/50 overflow-auto whitespace-pre"
                 />
@@ -345,7 +310,7 @@ export function AdminPage() {
                   size="sm"
                   className="absolute top-2 right-2"
                   onClick={() => {
-                    navigator.clipboard.writeText(formatApiResponse(latestApiResponse));
+                    navigator.clipboard.writeText(JSON.stringify(latestApiResponse, null, 2));
                     toast({
                       title: "Copied",
                       description: "API response copied to clipboard",

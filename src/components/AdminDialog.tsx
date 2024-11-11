@@ -7,8 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Textarea } from '@/components/ui/textarea';
 import { Settings } from 'lucide-react';
 import { ModelProvider, modelConfig, updateModelConfig, currentSystemPrompt, updateSystemPrompt, resetSystemPrompt } from '@/lib/openai';
-
-const ADMIN_PASSWORD = 'T#sting123q';
+import { validateAdminPassword } from '@/lib/auth';
 
 export function AdminDialog() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,11 +18,12 @@ export function AdminDialog() {
   const [systemPrompt, setSystemPrompt] = useState(currentSystemPrompt);
 
   const handlePasswordSubmit = () => {
-    if (password === ADMIN_PASSWORD) {
+    if (validateAdminPassword(password)) {
       setIsAuthenticated(true);
     } else {
       alert('Incorrect password');
     }
+    setPassword('');
   };
 
   const handleProviderChange = (value: ModelProvider) => {
