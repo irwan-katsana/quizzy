@@ -1,4 +1,5 @@
-name: Build and Test
+name: Build and Deploy
+
 on:
   push:
     branches: [ main ]
@@ -17,7 +18,8 @@ jobs:
       VITE_PORT: ${{ secrets.VITE_PORT }}
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out the repository
+        uses: actions/checkout@v4
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -33,3 +35,23 @@ jobs:
         
       - name: Run linter
         run: npm run lint
+
+  deploy:
+    needs: build  # Only runs if the build job succeeds
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy to Local Machine
+        env:
+          HOST: "katsana.myds.me"
+          USER: "katsana"
+        run: |
+          ssh -o StrictHostKeyChecking=no -p 5022 $USER@$HOST "cd ~/quizzy && ./deploy-script.sh"
