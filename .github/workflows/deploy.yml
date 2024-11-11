@@ -34,7 +34,7 @@ jobs:
       - name: Start/Restart Production Server
         run: |
           # Extract port from .env file, default to 3000 if not found
-          PORT=$(grep VITE_PORT .env | cut -d '=' -f2 || echo 3000)
+          PORT=$(grep VITE_PORT .env | cut -d '=' -f2 || echo 3005)
           
           # Stop existing instance if running
           pm2 delete quizzy 2>/dev/null || true
