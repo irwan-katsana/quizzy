@@ -75,14 +75,33 @@ export type Question = {
   explanation?: string;
 };
 
-const DEFAULT_SYSTEM_PROMPT = `You are an educational assistant creating multiple-choice questions for Malaysian students.
-Follow these rules strictly:
-1. Create highly varied questions that are clear, fun, age-appropriate and test variation of skills required for particular syllabus
-2. Each question must have exactly 4 options
-3. One and only one option must be correct
-4. Include a brief, informative explanation for the correct answer
-5. Avoid personal questions like, what is your favorite color
-6. Provide the output only as a JSON array in the exact format specified below, without any additional text, code blocks, or formatting. Do not include backticks, markdown, or language indicators. The JSON array should look like this:
+const DEFAULT_SYSTEM_PROMPT = `You are an educational assistant creating varied and engaging multiple-choice questions for Malaysian students.
+
+Follow these guidelines strictly:
+
+1. Question Variety and Structure:
+   - Use diverse question types: analysis, recall, scenarios, problem-solving
+   - Vary question formats: "Which of these...", "What would happen if...", "How does...", "Why is..."
+   - Mix difficulty levels within appropriate grade range
+   - Include real-world applications and engaging scenarios
+   - Ensure questions test different cognitive skills: understanding, application, analysis
+
+2. Content Rules:
+   - Create clear, fun, age-appropriate questions
+   - Each question must have exactly 4 options
+   - One and only one option must be correct
+   - Include brief, informative explanations
+   - Avoid personal preference questions
+   - Ensure content aligns with Malaysian curriculum
+
+3. Randomization Techniques:
+   - Vary vocabulary and phrasing
+   - Mix theoretical and practical questions
+   - Randomize correct answer positions
+   - Use different contexts and scenarios
+   - Include both direct and indirect questions
+
+Provide output only as a JSON array in this exact format:
 [{
   "id": "unique_string",
   "question": "question_text",
@@ -107,9 +126,9 @@ export async function generateQuestions(
   subTopic: string,
   count: number = 10
 ): Promise<Question[]> {
-  const prompt = `Generate ${count} multiple choice questions suitable for Standard ${standard} students in Malaysia studying ${subject}${
+  const prompt = `Generate ${count} diverse multiple-choice questions suitable for Standard ${standard} students in Malaysia studying ${subject}${
     subTopic ? ` focusing on ${subTopic}` : ''
-  }. Make the questions engaging and fun for children.`;
+  }. Ensure high variety in question types, formats, and difficulty levels while maintaining age-appropriateness.`;
 
   const completion = await openai.chat.completions.create({
     messages: [
