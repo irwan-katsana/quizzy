@@ -24,6 +24,8 @@ function App() {
 
   const handleReset = () => {
     setQuestions([]);
+    // Scroll back to top when resetting
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (

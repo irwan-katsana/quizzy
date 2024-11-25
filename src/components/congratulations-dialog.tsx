@@ -5,7 +5,6 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogDescription,
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Trophy, Sparkles } from 'lucide-react';
@@ -89,28 +88,28 @@ export function CongratulationsDialog({
     <Dialog open={isOpen} onOpenChange={() => onClose()}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-center flex items-center justify-center gap-2 text-2xl">
+          <DialogTitle className="flex items-center justify-center gap-2 text-2xl">
             <Trophy className="h-6 w-6 text-yellow-500" />
             Congratulations!
           </DialogTitle>
-          <DialogDescription className="text-center pt-4 space-y-4">
-            <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-              {score} / {totalQuestions}
-            </div>
-            <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
-              {getMessage()}
-            </p>
-            <div className="py-4">
-              <Button
-                onClick={onClose}
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
-              >
-                <Sparkles className="mr-2 h-4 w-4" />
-                Generate More Questions
-              </Button>
-            </div>
-          </DialogDescription>
         </DialogHeader>
+        <div className="pt-4 space-y-4">
+          <h3 className="text-4xl font-bold text-center bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            {score} / {totalQuestions}
+          </h3>
+          <h4 className="text-lg font-medium text-center text-gray-700 dark:text-gray-300">
+            {getMessage()}
+          </h4>
+          <div className="py-4">
+            <Button
+              onClick={onClose}
+              className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+            >
+              <Sparkles className="mr-2 h-4 w-4" />
+              Generate More Questions
+            </Button>
+          </div>
+        </div>
       </DialogContent>
     </Dialog>
   );
