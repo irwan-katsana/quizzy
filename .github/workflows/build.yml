@@ -18,6 +18,10 @@ jobs:
       VITE_PORT: ${{ vars.VITE_PORT }}
 
     steps:
+      - name: Fix permissions
+        run: |
+          sudo chown -R $USER:$USER $GITHUB_WORKSPACE
+          
       - name: Check out the repository
         uses: actions/checkout@v4
       
@@ -32,3 +36,8 @@ jobs:
         
       - name: Build the application
         run: npm run build
+        
+      - name: Cleanup build artifacts
+        if: always()
+        run: |
+          sudo rm -rf dist || true
