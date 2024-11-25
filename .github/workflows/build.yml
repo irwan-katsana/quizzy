@@ -28,11 +28,12 @@ jobs:
           cache: 'npm'
           
       - name: Install dependencies
-        run: npm install || true
-
+        run: npm install
+        
       - name: Build the application
-        run: npm run build || true
+        run: npm run build
 
-      - name: Restart the application
+      - name: Set permissions
         run: |
-          pm2 restart quizzy || pm2 start app.js --name quizzy || true
+          sudo chown -R www-data:www-data dist
+          sudo chmod -R 755 dist
