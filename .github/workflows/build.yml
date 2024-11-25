@@ -16,6 +16,7 @@ jobs:
       VITE_GROK_API_KEY: ${{ secrets.VITE_GROK_API_KEY || '' }}
       VITE_ADMIN_PASSWORD: ${{ secrets.VITE_ADMIN_PASSWORD }}
       VITE_PORT: ${{ vars.VITE_PORT }}
+      VITE_BUILD_TIME: ${{ github.run_number }}-${{ github.sha }}
 
     steps:
       - name: Check out the repository
