@@ -15,6 +15,17 @@ import { Button } from '@/components/ui/button';
 function App() {
   const [questions, setQuestions] = useState<Question[]>([]);
 
+  const handleQuestionsGenerated = (newQuestions: Question[]) => {
+    // Clear previous questions first by setting empty array
+    setQuestions([]);
+    // Then set the new questions in the next render cycle
+    setTimeout(() => setQuestions(newQuestions), 0);
+  };
+
+  const handleReset = () => {
+    setQuestions([]);
+  };
+
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-blue-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-purple-900/10 dark:to-gray-900">
       <div className="container mx-auto px-4 py-8 min-h-screen">
@@ -49,8 +60,13 @@ function App() {
 
         <main className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center space-y-8">
-            <QuizForm onQuestionsGenerated={setQuestions} />
-            {questions.length > 0 && <QuizQuestions questions={questions} />}
+            <QuizForm onQuestionsGenerated={handleQuestionsGenerated} />
+            {questions.length > 0 && (
+              <QuizQuestions 
+                questions={questions} 
+                onReset={handleReset}
+              />
+            )}
           </div>
         </main>
       </div>

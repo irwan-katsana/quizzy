@@ -9,9 +9,10 @@ import { cn } from '@/lib/utils';
 interface QuizQuestionCardProps {
   question: Question;
   index: number;
+  onAnswered: (isCorrect: boolean) => void;
 }
 
-export function QuizQuestionCard({ question, index }: QuizQuestionCardProps) {
+export function QuizQuestionCard({ question, index, onAnswered }: QuizQuestionCardProps) {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const isCorrect = selectedAnswer === question.correctAnswer;
@@ -19,6 +20,7 @@ export function QuizQuestionCard({ question, index }: QuizQuestionCardProps) {
   const handleSubmit = () => {
     if (selectedAnswer) {
       setIsSubmitted(true);
+      onAnswered(isCorrect);
     }
   };
 

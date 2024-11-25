@@ -1,11 +1,41 @@
+import { useState, useEffect } from 'react';
 import { type Question } from '@/lib/openai';
 import { QuizQuestionCard } from './quiz-question-card';
 import { Card } from '@/components/ui/card';
 import { modelConfig, latestApiResponse } from '@/lib/openai';
 import { Bot } from 'lucide-react';
+import { CongratulationsDialog } from './congratulations-dialog';
 
-export function QuizQuestions({ questions }: { questions: Question[] }) {
+interface QuizQuestionsProps {
+  questions: Question[];
+  onReset: () => void;
+}
+
+export function QuizQuestions({ questions, onReset }: QuizQuestionsProps) {
+  const [answeredQuestions, setAnsweredQuestions] = useState<Set<string>>(new Set());
+  const [correctAnswers, setCorrectAnswers] = useState<Set<string>>(new Set());
+  const [showCongratulations, setShowCongratulations] = useState(false);
   const tokenUsage = latestApiResponse?.usage;
+
+  const handleQuestionAnswered = (questionId: string, isCorrect: boolean) => {
+    setAnsweredQuestions(prev => new Set([...prev, questionId]));
+    if (isCorrect) {
+      setCorrectAnswers(prev => new Set([...prev, questionId]));
+    }
+  };
+
+  useEffect(() => {
+    if (questions.length > 0 && answeredQuestions.size === questions.length) {
+      setShowCongratulations(true);
+    }
+  }, [answeredQuestions, questions.length]);
+
+  const handleDialogClose = () => {
+    setShowCongratulations(false);
+    setAnsweredQuestions(new Set());
+    setCorrectAnswers(new Set());
+    onReset();
+  };
   
   return (
     <div className="w-full space-y-6">
@@ -15,6 +45,7 @@ export function QuizQuestions({ questions }: { questions: Question[] }) {
             key={question.id}
             question={question}
             index={idx}
+            onAnswered={(isCorrect) => handleQuestionAnswered(question.id, isCorrect)}
           />
         ))}
       </div>
@@ -38,6 +69,13 @@ export function QuizQuestions({ questions }: { questions: Question[] }) {
           )}
         </div>
       </Card>
+
+      <CongratulationsDialog
+        isOpen={showCongratulations}
+        onClose={handleDialogClose}
+        score={correctAnswers.size}
+        totalQuestions={questions.length}
+      />
     </div>
   );
 }
