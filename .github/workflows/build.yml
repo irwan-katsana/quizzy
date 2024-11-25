@@ -34,6 +34,11 @@ jobs:
       - name: Build the application
         run: npm run build
         
+      - name: Copy build files to deployment directory
+        run: |
+          rm -rf ~/quizzy/dist || true
+          cp -r dist ~/quizzy/dist
+        
       - name: Cleanup build artifacts
         if: always()
         run: rm -rf dist || exit 0
