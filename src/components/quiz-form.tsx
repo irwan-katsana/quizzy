@@ -59,7 +59,7 @@ export function QuizForm({ onQuestionsGenerated }: { onQuestionsGenerated: (ques
       <div className="flex items-center space-x-2">
         <Sparkles className="w-6 h-6 text-purple-500" />
         <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-          AI Quiz Generator
+          AI Quiz Generator V2
         </h2>
       </div>
       
