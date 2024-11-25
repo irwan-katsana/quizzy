@@ -56,11 +56,14 @@ export function QuizForm({ onQuestionsGenerated }: { onQuestionsGenerated: (ques
 
   return (
     <Card className="w-full max-w-md p-6 space-y-6 bg-white/80 backdrop-blur-sm border-2 border-purple-100 dark:border-purple-900 dark:bg-gray-900/80 shadow-xl">
-      <div className="flex items-center space-x-2">
-        <Sparkles className="w-6 h-6 text-purple-500" />
-        <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-          AI Quiz Generator V3
-        </h2>
+      <div className="relative">
+        <span className="absolute -top-3 right-0 text-[10px] text-gray-400 dark:text-gray-500">v0.3.1</span>
+        <div className="flex items-center space-x-2">
+          <Sparkles className="w-6 h-6 text-purple-500" />
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            AI Quiz Generator
+          </h2>
+        </div>
       </div>
       
       <form onSubmit={handleSubmit} className="space-y-4">
