@@ -30,7 +30,8 @@ export function QuizQuestionCard({ question, index, onAnswered }: QuizQuestionCa
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -20 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.4, ease: 'easeOut' }}
+      style={{ willChange: 'transform' }}
     >
       <Card className="p-6 shadow-lg bg-white/80 backdrop-blur-sm border-2 border-purple-100 dark:border-purple-900 dark:bg-gray-900/80">
         <div className="space-y-6">
@@ -42,10 +43,16 @@ export function QuizQuestionCard({ question, index, onAnswered }: QuizQuestionCa
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
-                transition={{ type: "spring", stiffness: 260, damping: 20 }}
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 150, 
+                  damping: 15,
+                  duration: 0.6 
+                }}
+                style={{ willChange: 'transform' }}
               >
                 {isCorrect ? (
-                  <CheckCircle2 className="h-6 w-6 text-green-500 animate-bounce" />
+                  <CheckCircle2 className="h-6 w-6 text-green-500" />
                 ) : (
                   <XCircle className="h-6 w-6 text-red-500" />
                 )}
@@ -62,10 +69,15 @@ export function QuizQuestionCard({ question, index, onAnswered }: QuizQuestionCa
                   key={optIdx}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: optIdx * 0.1 }}
+                  transition={{ 
+                    duration: 0.4, 
+                    delay: optIdx * 0.15,
+                    ease: 'easeOut'
+                  }}
+                  style={{ willChange: 'transform' }}
                   className={cn(
                     "relative flex items-center",
-                    "rounded-lg border-2 p-4 cursor-pointer transition-all",
+                    "rounded-lg border-2 p-4 cursor-pointer transition-all duration-300",
                     !isSubmitted && "hover:bg-purple-50 dark:hover:bg-purple-900/20",
                     selectedAnswer === option && !isSubmitted && "border-purple-400 bg-purple-50 dark:bg-purple-900/20",
                     isSubmitted && option === question.correctAnswer && "border-green-400 bg-green-50 dark:bg-green-900/20",
@@ -77,14 +89,14 @@ export function QuizQuestionCard({ question, index, onAnswered }: QuizQuestionCa
                   <div className="flex items-center flex-1">
                     <div
                       className={cn(
-                        "h-4 w-4 rounded-full border-2 mr-4",
+                        "h-4 w-4 rounded-full border-2 mr-4 transition-all duration-300",
                         selectedAnswer === option && !isSubmitted && "border-purple-500 bg-purple-500",
                         isSubmitted && option === question.correctAnswer && "border-green-500 bg-green-500",
                         isSubmitted && selectedAnswer === option && option !== question.correctAnswer && "border-red-500 bg-red-500",
                       )}
                     />
                     <Label className={cn(
-                      "flex-1 cursor-pointer text-base",
+                      "flex-1 cursor-pointer text-base transition-colors duration-300",
                       isSubmitted && option === question.correctAnswer && "text-green-700 dark:text-green-300 font-medium",
                       isSubmitted && selectedAnswer === option && option !== question.correctAnswer && "text-red-700 dark:text-red-300"
                     )}>
@@ -100,7 +112,7 @@ export function QuizQuestionCard({ question, index, onAnswered }: QuizQuestionCa
             <Button 
               onClick={handleSubmit}
               disabled={!selectedAnswer}
-              className="w-full mt-4 text-base py-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg"
+              className="w-full mt-4 text-base py-6 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg transition-all duration-300"
               size="lg"
             >
               Submit Answer
@@ -111,6 +123,8 @@ export function QuizQuestionCard({ question, index, onAnswered }: QuizQuestionCa
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              style={{ willChange: 'transform' }}
               className={cn(
                 "mt-4 p-4 rounded-lg border-2",
                 isCorrect 

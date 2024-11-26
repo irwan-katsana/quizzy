@@ -1,4 +1,5 @@
 import OpenAI from 'openai';
+import { getRandomTopics } from './subjects';
 
 export type ModelProvider = 'openai' | 'groq' | 'grok';
 
@@ -126,9 +127,11 @@ export async function generateQuestions(
   subTopic: string,
   count: number = 10
 ): Promise<Question[]> {
-  const prompt = `Generate ${count} diverse multiple-choice questions suitable for Standard ${standard} students in Malaysia studying ${subject}${
-    subTopic ? ` focusing on ${subTopic}` : ''
-  }. Ensure high variety in question types, formats, and difficulty levels while maintaining age-appropriateness.`;
+  // If no subtopic provided, get random topics from the current standard only
+  const topics = !subTopic ? getRandomTopics(subject, standard, 3) : [subTopic];
+  const topicsPrompt = topics.length > 0 ? ` focusing on topics like ${topics.join(', ')}` : '';
+
+  const prompt = `Generate ${count} diverse multiple-choice questions suitable for Standard ${standard} students in Malaysia studying ${subject}${topicsPrompt}. Ensure high variety in question types, formats, and difficulty levels while maintaining age-appropriateness.`;
 
   const completion = await openai.chat.completions.create({
     messages: [
