@@ -22,7 +22,7 @@ import { getTopics, getRandomTopics } from '@/lib/subjects';
 import { VERSION } from '@/lib/version';
 
 const STANDARDS = ['1', '2', '3', '4', '5', '6'];
-const SUBJECTS = ['Bahasa Malaysia', 'English', 'Math', 'Science'];
+const SUBJECTS = ['Math', 'Science'];
 
 export function QuizForm({ onQuestionsGenerated }: { onQuestionsGenerated: (questions: Question[]) => void }) {
   const [standard, setStandard] = useState<string>('');
