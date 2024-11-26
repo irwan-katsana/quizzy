@@ -948,157 +948,157 @@ export const subjectTopics: SubjectData = {
     "1": [
       {
         name: "Huruf Hijaiyah",
-        helper: "Create questions about Arabic alphabet recognition, writing, and pronunciation focusing on basic Hijaiyah letters."
+        helper: "Buat soalan dalam Bahasa Malaysia tentang pengenalan, penulisan, dan sebutan huruf Hijaiyah asas. Sertakan contoh huruf dalam tulisan Arab."
       },
       {
         name: "Angka dalam Bahasa Arab",
-        helper: "Include exercises for learning and writing Arabic numbers from 1-10 (واحد to عشرة)."
+        helper: "Buat soalan dalam Bahasa Malaysia untuk pembelajaran nombor 1-10 (واحد hingga عشرة). Sertakan nombor dalam tulisan Arab."
       },
       {
         name: "Kata Ganti Nama",
-        helper: "Focus on basic pronouns like أنا (I), أنت (you), هو (he), هي (she)."
+        helper: "Buat soalan dalam Bahasa Malaysia tentang kata ganti nama asas seperti أنا (saya), أنت (awak), هو (dia-lelaki), هي (dia-perempuan)."
       },
       {
         name: "Kata Nama Keluarga",
-        helper: "Include vocabulary about family members like أب (father), أم (mother), أخ (brother), أخت (sister)."
+        helper: "Buat soalan dalam Bahasa Malaysia tentang ahli keluarga seperti أب (bapa), أم (ibu), أخ (abang/adik lelaki), أخت (kakak/adik perempuan)."
       },
       {
         name: "Ucapan Harian",
-        helper: "Create exercises about daily greetings and common phrases like السلام عليكم, صباح الخير."
+        helper: "Buat soalan dalam Bahasa Malaysia tentang ucapan harian seperti السلام عليكم dan صباح الخير. Sertakan maksud dalam Bahasa Malaysia."
       },
       {
         name: "Warna-warna",
-        helper: "Focus on basic colors in Arabic like أحمر (red), أزرق (blue), أصفر (yellow)."
+        helper: "Buat soalan dalam Bahasa Malaysia tentang warna-warna asas seperti أحمر (merah), أزرق (biru), أصفر (kuning)."
       }
     ],
     "2": [
       {
         name: "Bacaan Huruf Bersambung",
-        helper: "Create exercises for reading and writing connected Arabic letters in different positions."
+        helper: "Buat soalan dalam Bahasa Malaysia tentang cara membaca dan menulis huruf Arab bersambung. 70% soalan dalam Bahasa Malaysia, 30% dalam Bahasa Arab mudah."
       },
       {
         name: "Kata Nama Binatang",
-        helper: "Include vocabulary about animals like قط (cat), كلب (dog), أسد (lion)."
+        helper: "Buat soalan dalam Bahasa Malaysia tentang nama-nama binatang seperti قط (kucing), كلب (anjing), أسد (singa). Sertakan beberapa soalan mudah dalam Bahasa Arab."
       },
       {
         name: "Kata Kerja Mudah",
-        helper: "Focus on simple verbs like يأكل (eat), يشرب (drink), ينام (sleep)."
+        helper: "Buat soalan dalam Bahasa Malaysia tentang kata kerja mudah seperti يأكل (makan), يشرب (minum), ينام (tidur). Masukkan soalan ringkas dalam Bahasa Arab."
       },
       {
         name: "Anggota Badan",
-        helper: "Include vocabulary about body parts like رأس (head), يد (hand), عين (eye)."
+        helper: "Buat soalan dalam Bahasa Malaysia tentang anggota badan seperti رأس (kepala), يد (tangan), عين (mata). Sertakan latihan mudah dalam Bahasa Arab."
       },
       {
         name: "Kata Tunjuk",
-        helper: "Create exercises about demonstrative pronouns like هذا (this), ذلك (that)."
+        helper: "Buat soalan dalam Bahasa Malaysia tentang kata tunjuk seperti هذا (ini), ذلك (itu). Masukkan beberapa soalan dalam Bahasa Arab."
       },
       {
         name: "Buah-buahan",
-        helper: "Focus on fruit vocabulary like تفاح (apple), موز (banana), برتقال (orange)."
+        helper: "Buat soalan dalam Bahasa Malaysia tentang buah-buahan seperti تفاح (epal), موز (pisang), برتقال (oren). Sertakan soalan mudah dalam Bahasa Arab."
       }
     ],
     "3": [
       {
         name: "Ayat Mudah",
-        helper: "Create exercises for forming simple sentences using basic subject-verb structure."
+        helper: "Buat soalan dengan 60% dalam Bahasa Malaysia dan 40% dalam Bahasa Arab. Fokus pada pembentukan ayat mudah menggunakan struktur subjek-kata kerja."
       },
       {
         name: "Kata Nama Tempat",
-        helper: "Include vocabulary about places like مدرسة (school), بيت (house), مسجد (mosque)."
+        helper: "Buat soalan dengan 60% dalam Bahasa Malaysia dan 40% dalam Bahasa Arab tentang tempat seperti مدرسة (sekolah), بيت (rumah), مسجد (masjid)."
       },
       {
         name: "Kata Sifat",
-        helper: "Focus on basic adjectives like كبير (big), صغير (small), جميل (beautiful)."
+        helper: "Buat soalan dengan 60% dalam Bahasa Malaysia dan 40% dalam Bahasa Arab tentang kata sifat seperti كبير (besar), صغير (kecil), جميل (cantik)."
       },
       {
         name: "Kata Kerja Masa Kini",
-        helper: "Include present tense verbs and their conjugations with pronouns."
+        helper: "Buat soalan dengan 60% dalam Bahasa Malaysia dan 40% dalam Bahasa Arab tentang kata kerja masa kini dan konjugasinya dengan kata ganti nama."
       },
       {
         name: "Makanan dan Minuman",
-        helper: "Create exercises about food and drink vocabulary and simple conversations about them."
+        helper: "Buat soalan dengan 60% dalam Bahasa Malaysia dan 40% dalam Bahasa Arab tentang makanan dan minuman, termasuk perbualan ringkas."
       },
       {
         name: "Kata Bilangan 1-20",
-        helper: "Focus on numbers from 1-20 and their use in simple counting exercises."
+        helper: "Buat soalan dengan 60% dalam Bahasa Malaysia dan 40% dalam Bahasa Arab tentang nombor 1-20 dan penggunaannya dalam latihan mengira."
       }
     ],
     "4": [
       {
         name: "Ayat Penyata",
-        helper: "Create exercises for forming declarative sentences and simple paragraphs."
+        helper: "Buat soalan dengan 50% dalam Bahasa Malaysia dan 50% dalam Bahasa Arab tentang pembentukan ayat penyata dan perenggan mudah."
       },
       {
         name: "Kata Kerja Masa Lampau",
-        helper: "Include past tense verbs and their basic conjugations."
+        helper: "Buat soalan dengan 50% dalam Bahasa Malaysia dan 50% dalam Bahasa Arab tentang kata kerja masa lampau dan konjugasi asas."
       },
       {
         name: "Kata Nama Pekerjaan",
-        helper: "Focus on occupations like معلم (teacher), طبيب (doctor), شرطي (police)."
+        helper: "Buat soalan dengan 50% dalam Bahasa Malaysia dan 50% dalam Bahasa Arab tentang pekerjaan seperti معلم (guru), طبيب (doktor), شرطي (polis)."
       },
       {
         name: "Kata Hubung",
-        helper: "Include connecting words like و (and), ثم (then), لكن (but)."
+        helper: "Buat soalan dengan 50% dalam Bahasa Malaysia dan 50% dalam Bahasa Arab tentang kata hubung seperti و (dan), ثم (kemudian), لكن (tetapi)."
       },
       {
         name: "Hobi dan Aktiviti",
-        helper: "Create exercises about hobbies and activities vocabulary and related conversations."
+        helper: "Buat soalan dengan 50% dalam Bahasa Malaysia dan 50% dalam Bahasa Arab tentang hobi dan aktiviti, termasuk perbualan berkaitan."
       },
       {
         name: "Musim dan Cuaca",
-        helper: "Focus on seasons and weather vocabulary with simple descriptions."
+        helper: "Buat soalan dengan 50% dalam Bahasa Malaysia dan 50% dalam Bahasa Arab tentang musim dan cuaca dengan penerangan ringkas."
       }
     ],
     "5": [
       {
         name: "Ayat Soal Jawab",
-        helper: "Create exercises for forming questions and appropriate responses."
+        helper: "Buat soalan dengan 40% dalam Bahasa Malaysia dan 60% dalam Bahasa Arab tentang pembentukan soalan dan jawapan yang sesuai."
       },
       {
         name: "Kata Kerja Masa Depan",
-        helper: "Include future tense verbs and their basic usage in sentences."
+        helper: "Buat soalan dengan 40% dalam Bahasa Malaysia dan 60% dalam Bahasa Arab tentang kata kerja masa depan dan penggunaannya dalam ayat."
       },
       {
         name: "Kata Sendi",
-        helper: "Focus on prepositions like في (in), على (on), من (from)."
+        helper: "Buat soalan dengan 40% dalam Bahasa Malaysia dan 60% dalam Bahasa Arab tentang kata sendi seperti في (dalam), على (atas), من (dari)."
       },
       {
         name: "Pengangkutan",
-        helper: "Include vocabulary about transportation and travel-related conversations."
+        helper: "Buat soalan dengan 40% dalam Bahasa Malaysia dan 60% dalam Bahasa Arab tentang pengangkutan dan perbualan berkaitan perjalanan."
       },
       {
         name: "Kata Bilangan 1-100",
-        helper: "Create exercises using numbers from 1-100 in various contexts."
+        helper: "Buat soalan dengan 40% dalam Bahasa Malaysia dan 60% dalam Bahasa Arab tentang nombor 1-100 dalam pelbagai konteks."
       },
       {
         name: "Perasaan dan Emosi",
-        helper: "Focus on vocabulary related to feelings and emotions with simple expressions."
+        helper: "Buat soalan dengan 40% dalam Bahasa Malaysia dan 60% dalam Bahasa Arab tentang perasaan dan emosi dengan ungkapan mudah."
       }
     ],
     "6": [
       {
         name: "Karangan Pendek",
-        helper: "Create exercises for writing short compositions on familiar topics."
+        helper: "Buat soalan dengan 30% dalam Bahasa Malaysia dan 70% dalam Bahasa Arab tentang penulisan karangan pendek mengenai topik yang biasa."
       },
       {
         name: "Perbualan Harian",
-        helper: "Include exercises for daily conversations and situational dialogues."
+        helper: "Buat soalan dengan 30% dalam Bahasa Malaysia dan 70% dalam Bahasa Arab tentang perbualan harian dan dialog situasi."
       },
       {
         name: "Kata Kerja Suruhan",
-        helper: "Focus on imperative verbs and giving instructions in Arabic."
+        helper: "Buat soalan dengan 30% dalam Bahasa Malaysia dan 70% dalam Bahasa Arab tentang kata kerja suruhan dan memberi arahan."
       },
       {
         name: "Kata Nafi",
-        helper: "Create exercises using negation in different tenses and contexts."
+        helper: "Buat soalan dengan 30% dalam Bahasa Malaysia dan 70% dalam Bahasa Arab tentang penggunaan penafian dalam pelbagai masa dan konteks."
       },
       {
         name: "Pembacaan dan Kefahaman",
-        helper: "Include reading comprehension exercises with short Arabic texts."
+        helper: "Buat soalan dengan 30% dalam Bahasa Malaysia dan 70% dalam Bahasa Arab tentang pemahaman teks Arab pendek."
       },
       {
         name: "Penulisan Kreatif",
-        helper: "Focus on creative writing exercises using learned vocabulary and grammar."
+        helper: "Buat soalan dengan 30% dalam Bahasa Malaysia dan 70% dalam Bahasa Arab tentang penulisan kreatif menggunakan kosa kata dan tatabahasa yang dipelajari."
       }
     ]
   }
