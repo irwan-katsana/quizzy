@@ -15,206 +15,218 @@ export const subjectTopics: SubjectData = {
   "Bahasa Malaysia": {
     "1": [
       {
-        name: "Kemahiran Mendengar dan Bertutur",
-        helper: "Include questions about listening comprehension, speaking skills, and basic conversation in daily situations like family, school, and hobbies."
+        name: "Keluarga Penyayang",
+        helper: "Create questions about loving family focusing on 'Keluargaku Sayang', 'Bergembira dengan Keluarga', and 'Bercuti di Kampung' to assess understanding of family relationships and activities."
       },
       {
-        name: "Bacaan dan Pemahaman",
-        helper: "Focus on reading simple texts, understanding main ideas, and answering basic comprehension questions about family, school, and daily activities."
+        name: "Masyarakat Muhibah",
+        helper: "Include questions about harmonious society covering 'Rakan Sekelas', 'Tolong-menolong', and 'Buku Segalanya' to evaluate understanding of social relationships and community values."
       },
       {
-        name: "Sistem Bunyi dan Ejaan",
-        helper: "Create questions about basic phonics, correct pronunciation, and spelling of common Malay words."
+        name: "Pentingkan Kebersihan dan Kesihatan",
+        helper: "Focus on cleanliness and health topics including 'Telitinya Rizal', 'Menu Sihat', and 'Kita Cergas' to assess knowledge of personal hygiene and healthy habits."
       },
       {
-        name: "Kosa Kata dan Perbendaharaan Kata",
-        helper: "Include vocabulary building exercises focusing on common words used in daily life, family, school, and basic emotions."
+        name: "Keselamatan",
+        helper: "Create questions about safety covering 'Pastikan Selamat', 'Kita Selamat di Sini', and 'Selamat di Jalan Raya' to evaluate understanding of safety practices."
       },
       {
-        name: "Tatabahasa Asas",
-        helper: "Focus on basic grammar including kata nama (nouns), kata kerja (verbs), and simple sentence structures."
+        name: "Negaraku Tercinta",
+        helper: "Include questions about love for country focusing on 'Budaya Kita', 'Milik Kita', and 'Sikap yang Baik' to assess patriotic values and good citizenship."
       },
       {
-        name: "Penulisan Kreatif",
-        helper: "Create exercises for writing simple sentences, short descriptions, and basic creative writing about familiar topics."
+        name: "Sains, Teknologi dan Inovasi",
+        helper: "Create questions about science, technology and innovation covering 'Sains dan Kita', 'Teknologi dan Kita', and 'Hebatnya Inovasi' to evaluate basic scientific understanding."
       },
       {
-        name: "Sastera Rakyat",
-        helper: "Include simple folk tales, nursery rhymes, and basic poetry suitable for Year 1 students."
+        name: "Lindungi Alam",
+        helper: "Focus on environmental protection topics including 'Sayangi Alam', 'Flora dan Fauna', and 'Bersihkan Alam' to assess environmental awareness."
       },
       {
-        name: "Nilai Murni dan Budaya",
-        helper: "Focus on moral values, cultural awareness, and good manners through language activities."
+        name: "Ekonomi, Keusahawanan dan Pengurusan Kewangan",
+        helper: "Include questions about economics and financial management covering 'Wang dalam Kehidupan', 'Peniaga Berjaya', and 'Mengurus Belanja' to evaluate basic financial literacy."
       }
     ],
     "2": [
       {
-        name: "Kemahiran Komunikasi Lisan",
-        helper: "Include exercises on expressing opinions, asking questions, and participating in simple discussions about daily life."
+        name: "Kekeluargaan",
+        helper: "Create questions about family life focusing on 'Hari Minggu dengan Keluarga', 'Cerita Keluarga', and 'Keluarga Berhemah' to assess understanding of family values and activities."
       },
       {
-        name: "Pemahaman Teks",
-        helper: "Create comprehension exercises using longer texts about community, environment, and simple stories."
+        name: "Perpaduan",
+        helper: "Include questions about unity and harmony covering 'Sahabat Karib', 'Hidup Berjiran', and 'Sepakat Membawa Berkat' to evaluate understanding of social relationships and community values."
       },
       {
-        name: "Penggunaan Tatabahasa",
-        helper: "Focus on expanded grammar concepts including kata sifat (adjectives), kata hubung (conjunctions), and sentence patterns."
+        name: "Kebersihan dan Kesihatan",
+        helper: "Focus on cleanliness and health topics including 'Kebersihan Bermula dari Rumah', 'Jadikan Amalan', and 'Aktifkan Diri' to assess knowledge of personal hygiene and healthy habits."
       },
       {
-        name: "Penulisan Karangan Pendek",
-        helper: "Include guided writing exercises for short compositions about personal experiences and simple stories."
+        name: "Kebudayaan Kita",
+        helper: "Create questions about our culture covering 'Uniknya Budaya Kita', 'Kesenian Dihargai', and 'Amalan Baik' to evaluate understanding of cultural heritage and practices."
       },
       {
-        name: "Pembacaan dan Analisis",
-        helper: "Create exercises for reading comprehension, identifying main ideas, and simple text analysis."
+        name: "Jati Diri, Patriotisme dan Kewarganegaraan",
+        helper: "Include questions about identity, patriotism and citizenship focusing on 'Bersikap Mulia', 'Hidup Berbakti', and 'Oh, Malaysiaku!' to assess national values and civic consciousness."
       },
       {
-        name: "Sastera Kanak-kanak",
-        helper: "Include children's literature, simple poems, and stories with moral values."
+        name: "Alam Sekitar dan Teknologi Hijau",
+        helper: "Create questions about environment and green technology covering 'Alamku Sayang', 'Kebersihan Alam Tanggungjawab Bersama', and 'Mesrai Alam' to evaluate environmental awareness."
       },
       {
-        name: "Kemahiran Mengeja",
-        helper: "Focus on spelling rules, common word patterns, and proper pronunciation."
+        name: "Pertanian dan Penternakan",
+        helper: "Focus on agriculture and livestock topics including 'Hargailah Pokok', 'Ternakan yang Berfaedah', and 'Rajin dan Usaha Tangga Kejayaan'."
       },
       {
-        name: "Budaya dan Adat Resam",
-        helper: "Include topics about Malaysian customs, traditions, and cultural practices."
+        name: "Integriti",
+        helper: "Include questions about integrity covering 'Anak yang Baik', 'Amalan Baik di Sekolah', and 'Berbuat Baik Selalu' to assess understanding of moral values and good behavior."
       }
     ],
     "3": [
       {
-        name: "Komunikasi Berkesan",
-        helper: "Create exercises for effective communication in various situations, including formal and informal contexts."
+        name: "Kekeluargaan",
+        helper: "Create questions focusing on family themes including 'Keluarga Cergas', 'Kejayaan Keluarga', and 'Kenangan Manis' to assess understanding of family values and relationships."
       },
       {
-        name: "Pemahaman Kritikal",
-        helper: "Include critical reading comprehension exercises with more complex texts and detailed questions."
+        name: "Kesihatan dan Kebersihan",
+        helper: "Include questions about health and cleanliness covering 'Saya Sihat dan Bertenaga', 'Kebersihan Tanggungjawab Bersama', and 'Minda Positif Badan Aktif' to evaluate understanding of personal health and hygiene."
       },
       {
-        name: "Tatabahasa Lanjutan",
-        helper: "Focus on advanced grammar including kata sendi nama (prepositions), ayat majmuk (compound sentences)."
+        name: "Keselamatan",
+        helper: "Focus on safety topics including 'Keselamatan di Rumah', 'Rekreasi Selamat', and 'Alatan Keselamatan' to assess knowledge of safety practices and awareness."
       },
       {
-        name: "Penulisan Kreatif Lanjutan",
-        helper: "Create exercises for writing longer compositions, descriptions, and creative stories."
+        name: "Perpaduan",
+        helper: "Create questions about unity covering 'Toleransi Kukuhkan Perpaduan', 'Hormat-menghormati Budaya Kita', and 'Kerjasama Asas Kesejahteraan' to evaluate understanding of social harmony."
       },
       {
-        name: "Sastera dan Puisi",
-        helper: "Include analysis of poems, short stories, and traditional literature suitable for Year 3."
+        name: "Kebudayaan, Kesenian dan Estetika",
+        helper: "Include questions about culture, arts and aesthetics focusing on 'Kekalkan Warisan Kita', 'Kenali Kesenian Kita', and 'Indahnya Seni dan Budaya Kita'."
       },
       {
-        name: "Kemahiran Membaca",
-        helper: "Focus on reading fluency, expression, and understanding various text types."
+        name: "Kelestarian Alam",
+        helper: "Create questions about environmental sustainability covering 'Pengurusan Sisa Pepejal', 'Sumbangan Kita', and 'Tahukah Kamu?' to assess environmental awareness."
       },
       {
-        name: "Pengembangan Kosa Kata",
-        helper: "Include exercises to expand vocabulary through context, synonyms, and antonyms."
+        name: "Pertanian dan Penternakan",
+        helper: "Focus on agriculture and livestock topics including 'Pertanian Sumber Pendapatan', 'Inovasi dalam Penternakan', and 'Bumi Bertuah'."
       },
       {
-        name: "Nilai dan Etika",
-        helper: "Create activities focusing on moral values, ethics, and social responsibility through language."
+        name: "Ekonomi, Keusahawanan dan Kewangan",
+        helper: "Include questions about economics, entrepreneurship and finance covering 'Bijak Ekonomi', 'Budaya Usahawan', and 'Bijak Mengurus Kewangan'."
       }
     ],
     "4": [
       {
-        name: "Komunikasi dan Pembentangan",
-        helper: "Include exercises for public speaking, presentations, and formal communication skills."
+        name: "Kemasyarakatan",
+        helper: "Create questions about social relationships focusing on 'Jiran Tetangga', 'Prihatinnya Kita', and 'Masyarakat Berilmu' to assess understanding of community values and social responsibility."
       },
       {
-        name: "Analisis Teks Kompleks",
-        helper: "Create comprehension exercises using more complex texts about social issues and current events."
+        name: "Kesihatan dan Kebersihan",
+        helper: "Include questions about health and cleanliness covering 'Saya Sihat', 'Persekitaran Bersih Hidup Ceria', and 'Pilih Gaya Hidup Sihat' to evaluate understanding of personal and environmental hygiene."
       },
       {
-        name: "Tatabahasa dan Sintaksis",
-        helper: "Focus on complex grammar structures, sentence patterns, and proper language usage."
+        name: "Keselamatan",
+        helper: "Focus on safety topics including 'Waspada Selalu', 'Hargai Diri', and 'Patuh dan Selamat' to assess knowledge of personal safety and security awareness."
       },
       {
-        name: "Penulisan Esei",
-        helper: "Include exercises for writing essays, reports, and creative compositions with proper structure."
+        name: "Kebudayaan, Kesenian dan Estetika",
+        helper: "Create questions about culture, arts and aesthetics covering 'Semarakkan Budaya Kita', 'Indah Seni Sepanjang Zaman', and 'Adat Dijunjung Budaya Disanjung'."
       },
       {
-        name: "Apresiasi Sastera",
-        helper: "Create activities for analyzing and appreciating various forms of Malay literature."
+        name: "Jati Diri, Patriotisme dan Kewarganegaraan",
+        helper: "Include questions about identity, patriotism and citizenship focusing on 'Jadikan Inspirasi', 'Demi Tanah Airku', and 'Aku Anak Watan'."
       },
       {
-        name: "Kemahiran Bahasa Formal",
-        helper: "Focus on formal language use in different contexts and situations."
+        name: "Sains, Teknologi dan Inovasi",
+        helper: "Create questions about science, technology and innovation covering 'Kehebatan Sains', 'Teknologi dalam Kehidupan', and 'Inovasi untuk Kita'."
       },
       {
-        name: "Penggunaan Peribahasa",
-        helper: "Include common proverbs, idioms, and their meanings in context."
+        name: "Pertanian dan Penternakan",
+        helper: "Focus on agriculture and livestock topics including 'Kreatifnya Petani Kita', 'Mari Bertani', and 'Ternakan Jana Pendapatan'."
       },
       {
-        name: "Budaya dan Warisan",
-        helper: "Create activities about Malaysian cultural heritage and traditions."
+        name: "Ekonomi, Keusahawanan dan Pengurusan Kewangan",
+        helper: "Include questions about economics, entrepreneurship and financial management covering 'Menjanakan Ekonomi', 'Usahawan Kita', and 'Pengurusan Perbelanjaan'."
+      },
+      {
+        name: "Integriti",
+        helper: "Create questions about integrity focusing on 'Tanggungjawab Digalas', 'Ibarat Pedang', and 'Seribu Impian' to assess understanding of moral values and responsibilities."
       }
     ],
     "5": [
       {
-        name: "Komunikasi Profesional",
-        helper: "Include exercises for professional communication, formal presentations, and public speaking."
+        name: "Kemasyarakatan",
+        helper: "The LLM could generate questions that assess understanding of social dynamics, interpersonal relationships, and the role of community in Malaysian society. This could include topics like social interaction, teamwork, communication, and applying social concepts to real-world situations."
       },
       {
-        name: "Analisis Kritikal Lanjutan",
-        helper: "Create advanced comprehension exercises with critical thinking and analysis."
+        name: "Kesihatan dan Kebersihan",
+        helper: "For this theme, the LLM could create questions that evaluate knowledge of personal health, hygiene, and sanitation practices. This could cover topics like disease prevention, healthy lifestyle choices, environmental cleanliness, and applying health/hygiene principles."
       },
       {
-        name: "Tatabahasa Komprehensif",
-        helper: "Focus on comprehensive grammar usage, including complex sentence structures and style."
+        name: "Keselamatan",
+        helper: "The questions here could assess understanding of safety protocols, risk awareness, and responsible behavior. This could include topics like accident prevention, emergency preparedness, personal security, and applying safety concepts in various contexts."
       },
       {
-        name: "Penulisan Akademik",
-        helper: "Include exercises for academic writing, formal reports, and structured essays."
+        name: "Perpaduan",
+        helper: "For this theme, the LLM could generate questions that test comprehension of unity, diversity, and national identity. This could cover topics like cultural appreciation, conflict resolution, civic engagement, and applying principles of unity and inclusion."
       },
       {
-        name: "Kajian Sastera",
-        helper: "Create activities for in-depth literary analysis and appreciation."
+        name: "Jati Diri, Patriotisme dan Kewarganegaraan",
+        helper: "The questions in this section could evaluate students' understanding of personal identity, patriotism, and responsible citizenship. This could include topics like national pride, civic duties, ethical decision-making, and applying these concepts to real-life scenarios."
       },
       {
-        name: "Bahasa dalam Media",
-        helper: "Focus on language use in media, advertisements, and digital communication."
+        name: "Sains, Teknologi dan Inovasi",
+        helper: "For this theme, the LLM could create questions that assess knowledge of scientific concepts, technological applications, and innovative thinking. This could cover topics like sustainability, emerging technologies, research and development, and using science/tech to address societal needs."
       },
       {
-        name: "Peribahasa dan Simpulan Bahasa",
-        helper: "Include advanced proverbs, idioms, and their application in writing."
+        name: "Kelestarian Alam",
+        helper: "The questions here could test understanding of environmental conservation, sustainability, and the importance of protecting natural resources. This could include topics like ecosystem preservation, renewable energy, waste management, and applying environmental principles."
       },
       {
-        name: "Warisan dan Identiti",
-        helper: "Create activities about national identity, cultural heritage, and diversity."
+        name: "Ekonomi, Keusahawanan dan Pengurusan Kewangan",
+        helper: "For this theme, the LLM could generate questions that evaluate economic concepts, entrepreneurial skills, and financial management. This could cover topics like personal finance, business principles, market dynamics, and applying economic/financial knowledge to make informed decisions."
+      },
+      {
+        name: "Integriti",
+        helper: "The questions in this section could assess understanding of ethical principles, responsible behavior, and the importance of integrity. This could include topics like moral reasoning, professional conduct, civic duty, and applying integrity-based concepts in various contexts."
       }
     ],
     "6": [
       {
-        name: "Komunikasi Strategik",
-        helper: "Include advanced communication strategies, debate skills, and persuasive speaking."
+        name: "Kekeluargaan",
+        helper: "Create questions about family relationships focusing on 'Saling Menyayangi', 'Ke Sana ke Sini', and 'Cerita Pertemuan' to assess understanding of family values and bonds."
       },
       {
-        name: "Analisis Wacana",
-        helper: "Create exercises for analyzing various types of discourse and complex texts."
+        name: "Kesihatan dan Kebersihan",
+        helper: "Include questions about health and cleanliness covering 'Kesihatan Tanggungjawab Kita', 'Kebersihan Asas Kesejahteraan', and 'Bersih Selalu, Sihat Sentiasa'."
       },
       {
-        name: "Tatabahasa Tinggi",
-        helper: "Focus on advanced grammar applications, style variations, and language accuracy."
+        name: "Keselamatan",
+        helper: "Focus on safety topics including 'Sentiasa Peka', 'Sentiasa Berhati-hati', and 'Waspada Fenomena Alam' to assess safety awareness and preparedness."
       },
       {
-        name: "Penulisan Profesional",
-        helper: "Include exercises for various types of professional writing and formal documentation."
+        name: "Perpaduan",
+        helper: "Create questions about unity covering 'Langkah Perpaduan', 'Gema Perpaduan', and 'Semarak Perpaduan' to evaluate understanding of national unity."
       },
       {
-        name: "Kajian Sastera Lanjutan",
-        helper: "Create activities for advanced literary analysis and creative writing."
+        name: "Kebudayaan, Kesenian, dan Estetika",
+        helper: "Include questions about culture, arts and aesthetics focusing on 'Warisan Budaya Kekal Terpelihara', 'Persada Seni Lambang Jati Diri', and 'Estetika Cita Rasa Malaysia'."
       },
       {
-        name: "Bahasa dan Teknologi",
-        helper: "Focus on language use in technology, digital media, and modern communication."
+        name: "Sains, Teknologi, dan Inovasi",
+        helper: "Create questions about science and technology covering 'Indahnya Sains', 'Teknologi Membantu Kita', and 'Inovasi Kreatif'."
       },
       {
-        name: "Kebudayaan dan Globalisasi",
-        helper: "Include topics about cultural preservation in a globalized world."
+        name: "Pertanian dan Penternakan",
+        helper: "Focus on agriculture and livestock topics including 'Penternakan Janakan Pendapatan', 'Rezeki daripada Tanah', and 'Dunia Tani dan Ternak'."
       },
       {
-        name: "Kemahiran Bahasa Integratif",
-        helper: "Create activities that integrate all language skills in complex tasks."
+        name: "Ekonomi, Keusahawanan, dan Pengurusan Kewangan",
+        helper: "Include questions about economics and finance covering 'Sumber Ekonomi', 'Usahawan Berjaya', and 'Bijak Mengurus Wang'."
+      },
+      {
+        name: "Integriti",
+        helper: "Create questions about integrity focusing on 'Amanah Sejagat', 'Integriti Nadi Kemakmuran Negara', and 'Kejujuran Asas Jati Diri' to assess moral values and ethics."
       }
     ]
   },
