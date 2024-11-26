@@ -1,5 +1,5 @@
 // Version management for the application
-export const VERSION = 'v0.4.4';
+export const VERSION = 'v0.4.5';
 
 // Helper function to get version with prefix
 export const getVersion = () => VERSION;
