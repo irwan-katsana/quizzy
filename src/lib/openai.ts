@@ -1,5 +1,5 @@
 import OpenAI from 'openai';
-import { getRandomTopics } from './subjects';
+import { getRandomTopics, getTopicHelper } from './subjects';
 
 export type ModelProvider = 'openai' | 'groq' | 'grok';
 
@@ -129,9 +129,25 @@ export async function generateQuestions(
 ): Promise<Question[]> {
   // If no subtopic provided, get random topics from the current standard only
   const topics = !subTopic ? getRandomTopics(subject, standard, 3) : [subTopic];
-  const topicsPrompt = topics.length > 0 ? ` focusing on topics like ${topics.join(', ')}` : '';
+  
+  // Get helper text for each topic
+  const topicsWithHelpers = topics.map(topic => ({
+    name: topic,
+    helper: getTopicHelper(subject, standard, topic) || ''
+  }));
 
-  const prompt = `Generate ${count} diverse multiple-choice questions suitable for Standard ${standard} students in Malaysia studying ${subject}${topicsPrompt}. Ensure high variety in question types, formats, and difficulty levels while maintaining age-appropriateness.`;
+  // Create a detailed prompt with topic helpers
+  const topicsPrompt = topicsWithHelpers.map(t => 
+    `${t.name} (Guidelines: ${t.helper})`
+  ).join('\n\n');
+
+  const prompt = `Generate ${count} diverse multiple-choice questions suitable for Standard ${standard} students in Malaysia studying ${subject}. 
+
+Focus on the following topics and their specific guidelines:
+
+${topicsPrompt}
+
+Ensure high variety in question types, formats, and difficulty levels while maintaining age-appropriateness.`;
 
   const completion = await openai.chat.completions.create({
     messages: [
