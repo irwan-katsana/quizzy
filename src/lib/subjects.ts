@@ -943,6 +943,164 @@ export const subjectTopics: SubjectData = {
         helper: "Include questions about modern technology, scientific ethics, and future implications."
       }
     ]
+  },
+  "Bahasa Arab": {
+    "1": [
+      {
+        name: "Huruf Hijaiyah",
+        helper: "Create questions about Arabic alphabet recognition, writing, and pronunciation focusing on basic Hijaiyah letters."
+      },
+      {
+        name: "Angka dalam Bahasa Arab",
+        helper: "Include exercises for learning and writing Arabic numbers from 1-10 (واحد to عشرة)."
+      },
+      {
+        name: "Kata Ganti Nama",
+        helper: "Focus on basic pronouns like أنا (I), أنت (you), هو (he), هي (she)."
+      },
+      {
+        name: "Kata Nama Keluarga",
+        helper: "Include vocabulary about family members like أب (father), أم (mother), أخ (brother), أخت (sister)."
+      },
+      {
+        name: "Ucapan Harian",
+        helper: "Create exercises about daily greetings and common phrases like السلام عليكم, صباح الخير."
+      },
+      {
+        name: "Warna-warna",
+        helper: "Focus on basic colors in Arabic like أحمر (red), أزرق (blue), أصفر (yellow)."
+      }
+    ],
+    "2": [
+      {
+        name: "Bacaan Huruf Bersambung",
+        helper: "Create exercises for reading and writing connected Arabic letters in different positions."
+      },
+      {
+        name: "Kata Nama Binatang",
+        helper: "Include vocabulary about animals like قط (cat), كلب (dog), أسد (lion)."
+      },
+      {
+        name: "Kata Kerja Mudah",
+        helper: "Focus on simple verbs like يأكل (eat), يشرب (drink), ينام (sleep)."
+      },
+      {
+        name: "Anggota Badan",
+        helper: "Include vocabulary about body parts like رأس (head), يد (hand), عين (eye)."
+      },
+      {
+        name: "Kata Tunjuk",
+        helper: "Create exercises about demonstrative pronouns like هذا (this), ذلك (that)."
+      },
+      {
+        name: "Buah-buahan",
+        helper: "Focus on fruit vocabulary like تفاح (apple), موز (banana), برتقال (orange)."
+      }
+    ],
+    "3": [
+      {
+        name: "Ayat Mudah",
+        helper: "Create exercises for forming simple sentences using basic subject-verb structure."
+      },
+      {
+        name: "Kata Nama Tempat",
+        helper: "Include vocabulary about places like مدرسة (school), بيت (house), مسجد (mosque)."
+      },
+      {
+        name: "Kata Sifat",
+        helper: "Focus on basic adjectives like كبير (big), صغير (small), جميل (beautiful)."
+      },
+      {
+        name: "Kata Kerja Masa Kini",
+        helper: "Include present tense verbs and their conjugations with pronouns."
+      },
+      {
+        name: "Makanan dan Minuman",
+        helper: "Create exercises about food and drink vocabulary and simple conversations about them."
+      },
+      {
+        name: "Kata Bilangan 1-20",
+        helper: "Focus on numbers from 1-20 and their use in simple counting exercises."
+      }
+    ],
+    "4": [
+      {
+        name: "Ayat Penyata",
+        helper: "Create exercises for forming declarative sentences and simple paragraphs."
+      },
+      {
+        name: "Kata Kerja Masa Lampau",
+        helper: "Include past tense verbs and their basic conjugations."
+      },
+      {
+        name: "Kata Nama Pekerjaan",
+        helper: "Focus on occupations like معلم (teacher), طبيب (doctor), شرطي (police)."
+      },
+      {
+        name: "Kata Hubung",
+        helper: "Include connecting words like و (and), ثم (then), لكن (but)."
+      },
+      {
+        name: "Hobi dan Aktiviti",
+        helper: "Create exercises about hobbies and activities vocabulary and related conversations."
+      },
+      {
+        name: "Musim dan Cuaca",
+        helper: "Focus on seasons and weather vocabulary with simple descriptions."
+      }
+    ],
+    "5": [
+      {
+        name: "Ayat Soal Jawab",
+        helper: "Create exercises for forming questions and appropriate responses."
+      },
+      {
+        name: "Kata Kerja Masa Depan",
+        helper: "Include future tense verbs and their basic usage in sentences."
+      },
+      {
+        name: "Kata Sendi",
+        helper: "Focus on prepositions like في (in), على (on), من (from)."
+      },
+      {
+        name: "Pengangkutan",
+        helper: "Include vocabulary about transportation and travel-related conversations."
+      },
+      {
+        name: "Kata Bilangan 1-100",
+        helper: "Create exercises using numbers from 1-100 in various contexts."
+      },
+      {
+        name: "Perasaan dan Emosi",
+        helper: "Focus on vocabulary related to feelings and emotions with simple expressions."
+      }
+    ],
+    "6": [
+      {
+        name: "Karangan Pendek",
+        helper: "Create exercises for writing short compositions on familiar topics."
+      },
+      {
+        name: "Perbualan Harian",
+        helper: "Include exercises for daily conversations and situational dialogues."
+      },
+      {
+        name: "Kata Kerja Suruhan",
+        helper: "Focus on imperative verbs and giving instructions in Arabic."
+      },
+      {
+        name: "Kata Nafi",
+        helper: "Create exercises using negation in different tenses and contexts."
+      },
+      {
+        name: "Pembacaan dan Kefahaman",
+        helper: "Include reading comprehension exercises with short Arabic texts."
+      },
+      {
+        name: "Penulisan Kreatif",
+        helper: "Focus on creative writing exercises using learned vocabulary and grammar."
+      }
+    ]
   }
 };
 
