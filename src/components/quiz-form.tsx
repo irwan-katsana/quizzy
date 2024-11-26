@@ -28,18 +28,8 @@ export function QuizForm({ onQuestionsGenerated }: { onQuestionsGenerated: (ques
   const [standard, setStandard] = useState<string>('');
   const [subject, setSubject] = useState<string>('');
   const [subTopic, setSubTopic] = useState('');
-  const [suggestedTopics, setSuggestedTopics] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
-
-  // Update suggested topics when standard or subject changes
-  useEffect(() => {
-    if (standard && subject) {
-      setSuggestedTopics(getRandomTopics(subject, standard));
-    } else {
-      setSuggestedTopics([]);
-    }
-  }, [standard, subject]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -72,6 +62,16 @@ export function QuizForm({ onQuestionsGenerated }: { onQuestionsGenerated: (ques
   };
 
   const availableTopics = standard && subject ? getTopics(subject, standard) : [];
+
+  // Get random topic suggestions when standard or subject changes
+  useEffect(() => {
+    if (standard && subject) {
+      const randomTopic = getRandomTopics(subject, standard, 1)[0];
+      setSubTopic(randomTopic || '');
+    } else {
+      setSubTopic('');
+    }
+  }, [standard, subject]);
 
   return (
     <Card className="w-full max-w-md mx-auto p-6 space-y-6 bg-white/80 backdrop-blur-sm border-2 border-purple-100 dark:border-purple-900 dark:bg-gray-900/80 shadow-xl">
@@ -155,8 +155,8 @@ export function QuizForm({ onQuestionsGenerated }: { onQuestionsGenerated: (ques
             id="subtopic"
             value={subTopic}
             onChange={(e) => setSubTopic(e.target.value)}
-            placeholder="Click the help icon to see available topics"
             className="border-2 border-purple-100 dark:border-purple-900"
+            placeholder="Click the help icon to see available topics"
           />
         </div>
 
