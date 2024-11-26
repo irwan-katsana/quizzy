@@ -12,6 +12,418 @@ export interface SubjectData {
 
 // Define the subject data with helper text for LLM
 export const subjectTopics: SubjectData = {
+  "Bahasa Malaysia": {
+    "1": [
+      {
+        name: "Kemahiran Mendengar dan Bertutur",
+        helper: "Include questions about listening comprehension, speaking skills, and basic conversation in daily situations like family, school, and hobbies."
+      },
+      {
+        name: "Bacaan dan Pemahaman",
+        helper: "Focus on reading simple texts, understanding main ideas, and answering basic comprehension questions about family, school, and daily activities."
+      },
+      {
+        name: "Sistem Bunyi dan Ejaan",
+        helper: "Create questions about basic phonics, correct pronunciation, and spelling of common Malay words."
+      },
+      {
+        name: "Kosa Kata dan Perbendaharaan Kata",
+        helper: "Include vocabulary building exercises focusing on common words used in daily life, family, school, and basic emotions."
+      },
+      {
+        name: "Tatabahasa Asas",
+        helper: "Focus on basic grammar including kata nama (nouns), kata kerja (verbs), and simple sentence structures."
+      },
+      {
+        name: "Penulisan Kreatif",
+        helper: "Create exercises for writing simple sentences, short descriptions, and basic creative writing about familiar topics."
+      },
+      {
+        name: "Sastera Rakyat",
+        helper: "Include simple folk tales, nursery rhymes, and basic poetry suitable for Year 1 students."
+      },
+      {
+        name: "Nilai Murni dan Budaya",
+        helper: "Focus on moral values, cultural awareness, and good manners through language activities."
+      }
+    ],
+    "2": [
+      {
+        name: "Kemahiran Komunikasi Lisan",
+        helper: "Include exercises on expressing opinions, asking questions, and participating in simple discussions about daily life."
+      },
+      {
+        name: "Pemahaman Teks",
+        helper: "Create comprehension exercises using longer texts about community, environment, and simple stories."
+      },
+      {
+        name: "Penggunaan Tatabahasa",
+        helper: "Focus on expanded grammar concepts including kata sifat (adjectives), kata hubung (conjunctions), and sentence patterns."
+      },
+      {
+        name: "Penulisan Karangan Pendek",
+        helper: "Include guided writing exercises for short compositions about personal experiences and simple stories."
+      },
+      {
+        name: "Pembacaan dan Analisis",
+        helper: "Create exercises for reading comprehension, identifying main ideas, and simple text analysis."
+      },
+      {
+        name: "Sastera Kanak-kanak",
+        helper: "Include children's literature, simple poems, and stories with moral values."
+      },
+      {
+        name: "Kemahiran Mengeja",
+        helper: "Focus on spelling rules, common word patterns, and proper pronunciation."
+      },
+      {
+        name: "Budaya dan Adat Resam",
+        helper: "Include topics about Malaysian customs, traditions, and cultural practices."
+      }
+    ],
+    "3": [
+      {
+        name: "Komunikasi Berkesan",
+        helper: "Create exercises for effective communication in various situations, including formal and informal contexts."
+      },
+      {
+        name: "Pemahaman Kritikal",
+        helper: "Include critical reading comprehension exercises with more complex texts and detailed questions."
+      },
+      {
+        name: "Tatabahasa Lanjutan",
+        helper: "Focus on advanced grammar including kata sendi nama (prepositions), ayat majmuk (compound sentences)."
+      },
+      {
+        name: "Penulisan Kreatif Lanjutan",
+        helper: "Create exercises for writing longer compositions, descriptions, and creative stories."
+      },
+      {
+        name: "Sastera dan Puisi",
+        helper: "Include analysis of poems, short stories, and traditional literature suitable for Year 3."
+      },
+      {
+        name: "Kemahiran Membaca",
+        helper: "Focus on reading fluency, expression, and understanding various text types."
+      },
+      {
+        name: "Pengembangan Kosa Kata",
+        helper: "Include exercises to expand vocabulary through context, synonyms, and antonyms."
+      },
+      {
+        name: "Nilai dan Etika",
+        helper: "Create activities focusing on moral values, ethics, and social responsibility through language."
+      }
+    ],
+    "4": [
+      {
+        name: "Komunikasi dan Pembentangan",
+        helper: "Include exercises for public speaking, presentations, and formal communication skills."
+      },
+      {
+        name: "Analisis Teks Kompleks",
+        helper: "Create comprehension exercises using more complex texts about social issues and current events."
+      },
+      {
+        name: "Tatabahasa dan Sintaksis",
+        helper: "Focus on complex grammar structures, sentence patterns, and proper language usage."
+      },
+      {
+        name: "Penulisan Esei",
+        helper: "Include exercises for writing essays, reports, and creative compositions with proper structure."
+      },
+      {
+        name: "Apresiasi Sastera",
+        helper: "Create activities for analyzing and appreciating various forms of Malay literature."
+      },
+      {
+        name: "Kemahiran Bahasa Formal",
+        helper: "Focus on formal language use in different contexts and situations."
+      },
+      {
+        name: "Penggunaan Peribahasa",
+        helper: "Include common proverbs, idioms, and their meanings in context."
+      },
+      {
+        name: "Budaya dan Warisan",
+        helper: "Create activities about Malaysian cultural heritage and traditions."
+      }
+    ],
+    "5": [
+      {
+        name: "Komunikasi Profesional",
+        helper: "Include exercises for professional communication, formal presentations, and public speaking."
+      },
+      {
+        name: "Analisis Kritikal Lanjutan",
+        helper: "Create advanced comprehension exercises with critical thinking and analysis."
+      },
+      {
+        name: "Tatabahasa Komprehensif",
+        helper: "Focus on comprehensive grammar usage, including complex sentence structures and style."
+      },
+      {
+        name: "Penulisan Akademik",
+        helper: "Include exercises for academic writing, formal reports, and structured essays."
+      },
+      {
+        name: "Kajian Sastera",
+        helper: "Create activities for in-depth literary analysis and appreciation."
+      },
+      {
+        name: "Bahasa dalam Media",
+        helper: "Focus on language use in media, advertisements, and digital communication."
+      },
+      {
+        name: "Peribahasa dan Simpulan Bahasa",
+        helper: "Include advanced proverbs, idioms, and their application in writing."
+      },
+      {
+        name: "Warisan dan Identiti",
+        helper: "Create activities about national identity, cultural heritage, and diversity."
+      }
+    ],
+    "6": [
+      {
+        name: "Komunikasi Strategik",
+        helper: "Include advanced communication strategies, debate skills, and persuasive speaking."
+      },
+      {
+        name: "Analisis Wacana",
+        helper: "Create exercises for analyzing various types of discourse and complex texts."
+      },
+      {
+        name: "Tatabahasa Tinggi",
+        helper: "Focus on advanced grammar applications, style variations, and language accuracy."
+      },
+      {
+        name: "Penulisan Profesional",
+        helper: "Include exercises for various types of professional writing and formal documentation."
+      },
+      {
+        name: "Kajian Sastera Lanjutan",
+        helper: "Create activities for advanced literary analysis and creative writing."
+      },
+      {
+        name: "Bahasa dan Teknologi",
+        helper: "Focus on language use in technology, digital media, and modern communication."
+      },
+      {
+        name: "Kebudayaan dan Globalisasi",
+        helper: "Include topics about cultural preservation in a globalized world."
+      },
+      {
+        name: "Kemahiran Bahasa Integratif",
+        helper: "Create activities that integrate all language skills in complex tasks."
+      }
+    ]
+  },
+  "English": {
+    "1": [
+      {
+        name: "Listening and Speaking",
+        helper: "Include exercises for basic listening comprehension, pronunciation, and simple conversations about family, school, and daily activities."
+      },
+      {
+        name: "Phonics and Word Recognition",
+        helper: "Focus on basic phonics, letter sounds, and sight words commonly used in daily life."
+      },
+      {
+        name: "Basic Reading",
+        helper: "Create exercises for reading simple texts, understanding basic vocabulary, and comprehension of short stories."
+      },
+      {
+        name: "Basic Writing",
+        helper: "Include activities for writing simple sentences, basic descriptions, and short messages."
+      },
+      {
+        name: "Grammar Basics",
+        helper: "Focus on basic grammar including nouns, verbs, and simple present tense."
+      },
+      {
+        name: "Vocabulary Building",
+        helper: "Create activities for learning and using common English words in context."
+      },
+      {
+        name: "Stories and Rhymes",
+        helper: "Include simple stories, nursery rhymes, and songs for language development."
+      },
+      {
+        name: "Social Expressions",
+        helper: "Focus on basic greetings, polite expressions, and simple social interactions."
+      }
+    ],
+    "2": [
+      {
+        name: "Oral Communication",
+        helper: "Include exercises for expressing opinions, asking questions, and participating in simple discussions."
+      },
+      {
+        name: "Reading Comprehension",
+        helper: "Create activities for understanding longer texts, identifying main ideas, and answering questions."
+      },
+      {
+        name: "Writing Skills",
+        helper: "Focus on writing short paragraphs, descriptions, and simple stories with proper structure."
+      },
+      {
+        name: "Grammar in Use",
+        helper: "Include exercises on present and past tense, adjectives, and basic sentence patterns."
+      },
+      {
+        name: "Vocabulary Expansion",
+        helper: "Create activities for learning new words, synonyms, and antonyms."
+      },
+      {
+        name: "Literature Appreciation",
+        helper: "Include simple poems, stories, and children's literature with comprehension activities."
+      },
+      {
+        name: "Functional Writing",
+        helper: "Focus on writing simple letters, messages, and basic functional texts."
+      },
+      {
+        name: "Cultural Awareness",
+        helper: "Create activities about different cultures and customs through language learning."
+      }
+    ],
+    "3": [
+      {
+        name: "Speaking and Presentation",
+        helper: "Include exercises for short presentations, discussions, and expressing opinions clearly."
+      },
+      {
+        name: "Advanced Reading",
+        helper: "Create comprehension activities using more complex texts and detailed questions."
+      },
+      {
+        name: "Creative Writing",
+        helper: "Focus on writing stories, descriptions, and personal experiences with proper organization."
+      },
+      {
+        name: "Grammar Structures",
+        helper: "Include exercises on various tenses, modal verbs, and compound sentences."
+      },
+      {
+        name: "Vocabulary in Context",
+        helper: "Create activities for understanding and using words in different contexts."
+      },
+      {
+        name: "Story Analysis",
+        helper: "Include analysis of short stories, characters, and plot development."
+      },
+      {
+        name: "Functional English",
+        helper: "Focus on practical English use in various everyday situations."
+      },
+      {
+        name: "Communication Skills",
+        helper: "Create activities for effective communication in different settings."
+      }
+    ],
+    "4": [
+      {
+        name: "Public Speaking",
+        helper: "Include exercises for formal presentations, speeches, and structured discussions."
+      },
+      {
+        name: "Critical Reading",
+        helper: "Create activities for analyzing texts, making inferences, and critical thinking."
+      },
+      {
+        name: "Essay Writing",
+        helper: "Focus on writing different types of essays with proper structure and organization."
+      },
+      {
+        name: "Advanced Grammar",
+        helper: "Include complex grammar structures, reported speech, and conditional sentences."
+      },
+      {
+        name: "Academic Vocabulary",
+        helper: "Create activities for learning and using academic vocabulary effectively."
+      },
+      {
+        name: "Literature Study",
+        helper: "Include analysis of various literary texts and their themes."
+      },
+      {
+        name: "Formal Writing",
+        helper: "Focus on writing formal letters, reports, and academic texts."
+      },
+      {
+        name: "Media Literacy",
+        helper: "Create activities for understanding and analyzing media texts."
+      }
+    ],
+    "5": [
+      {
+        name: "Advanced Communication",
+        helper: "Include exercises for debates, discussions, and formal presentations."
+      },
+      {
+        name: "Analytical Reading",
+        helper: "Create activities for deep analysis of complex texts and critical evaluation."
+      },
+      {
+        name: "Academic Writing",
+        helper: "Focus on writing research reports, argumentative essays, and formal documents."
+      },
+      {
+        name: "Complex Grammar",
+        helper: "Include advanced grammar structures, style variations, and language accuracy."
+      },
+      {
+        name: "Advanced Vocabulary",
+        helper: "Create activities for expanding vocabulary through various contexts and subjects."
+      },
+      {
+        name: "Literary Analysis",
+        helper: "Include in-depth analysis of literature, themes, and writing styles."
+      },
+      {
+        name: "Professional Writing",
+        helper: "Focus on writing for different professional purposes and audiences."
+      },
+      {
+        name: "Digital Communication",
+        helper: "Create activities for effective communication in digital contexts."
+      }
+    ],
+    "6": [
+      {
+        name: "Professional Communication",
+        helper: "Include advanced presentation skills, formal discussions, and public speaking."
+      },
+      {
+        name: "Critical Analysis",
+        helper: "Create exercises for analyzing complex texts and advanced comprehension."
+      },
+      {
+        name: "Advanced Composition",
+        helper: "Focus on writing sophisticated essays, reports, and creative pieces."
+      },
+      {
+        name: "Grammar Mastery",
+        helper: "Include mastery of complex grammar structures and stylistic devices."
+      },
+      {
+        name: "Academic Excellence",
+        helper: "Create activities for advanced academic language use and research skills."
+      },
+      {
+        name: "Literature Appreciation",
+        helper: "Include advanced literary analysis and creative writing techniques."
+      },
+      {
+        name: "Global Communication",
+        helper: "Focus on international English usage and cross-cultural communication."
+      },
+      {
+        name: "Integrated Skills",
+        helper: "Create activities that combine all language skills in complex tasks."
+      }
+    ]
+  },
   "Math": {
     "1": [
       {
